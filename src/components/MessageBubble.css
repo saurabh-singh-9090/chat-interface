@@ -165,16 +165,16 @@
   background: none;
   border: none;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: #adb5bd;
   transition: all 0.2s ease;
-  font-size: 10px;
-  margin-left: 4px;
+  font-size: 12px;
+  margin-left: 6px;
   opacity: 0;
 }
 
@@ -206,8 +206,8 @@
   
   .message-action-btn {
     opacity: 1;
-    width: 14px;
-    height: 14px;
-    font-size: 9px;
+    width: 18px;
+    height: 18px;
+    font-size: 11px;
   }
 } 
