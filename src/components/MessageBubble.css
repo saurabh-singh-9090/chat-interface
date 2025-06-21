@@ -161,6 +161,32 @@
   margin-top: 16px;
 }
 
+.message-action-btn {
+  background: none;
+  border: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #adb5bd;
+  transition: all 0.2s ease;
+  font-size: 10px;
+  margin-left: 4px;
+  opacity: 0;
+}
+
+.message-bubble:hover .message-action-btn {
+  opacity: 1;
+}
+
+.message-action-btn:hover {
+  color: #ff6b6b;
+  transform: scale(1.2);
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
   .message-content {
@@ -176,5 +202,12 @@
     width: 32px;
     height: 32px;
     font-size: 12px;
+  }
+  
+  .message-action-btn {
+    opacity: 1;
+    width: 14px;
+    height: 14px;
+    font-size: 9px;
   }
 } 

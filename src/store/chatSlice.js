@@ -130,6 +130,25 @@ const chatSlice = createSlice({
           state.chats.unshift(movedChat);
         }
       }
+    },
+    
+    deleteMessage: (state, action) => {
+      const { chatId, messageId } = action.payload;
+      const chat = state.chats.find(c => c.id === chatId);
+      
+      if (chat) {
+        chat.messages = chat.messages.filter(msg => msg.id !== messageId);
+        
+        // Update last message if the deleted message was the last one
+        if (chat.messages.length > 0) {
+          const lastMsg = chat.messages[chat.messages.length - 1];
+          chat.lastMessage = lastMsg.content;
+          chat.timestamp = lastMsg.timestamp;
+        } else {
+          chat.lastMessage = '';
+          chat.timestamp = new Date().toISOString();
+        }
+      }
     }
   }
 });
@@ -139,7 +158,8 @@ export const {
   deleteChat,
   setActiveChat,
   sendMessage,
-  receiveMessage
+  receiveMessage,
+  deleteMessage
 } = chatSlice.actions;
 
 export default chatSlice.reducer; 
