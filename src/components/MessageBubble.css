@@ -1,0 +1,180 @@
+.message-bubble {
+  display: flex;
+  margin-bottom: 8px;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.message-bubble.own {
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+}
+
+.message-bubble.other {
+  flex-direction: row;
+}
+
+.message-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.message-content {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.message-bubble.own .message-content {
+  align-items: flex-end;
+}
+
+.message-bubble.other .message-content {
+  align-items: flex-start;
+}
+
+.message-sender {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6c757d;
+  margin-bottom: 4px;
+  padding: 0 12px;
+}
+
+.message-text {
+  background: white;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #2c3e50;
+  word-wrap: break-word;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.message-bubble.own .message-text {
+  background: linear-gradient(135deg, #d03c38 0%, #a02e2a 100%);
+  color: white;
+  border-bottom-right-radius: 6px;
+}
+
+.message-bubble.other .message-text {
+  background: white;
+  border-bottom-left-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.message-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+  padding: 0 4px;
+}
+
+.message-bubble.own .message-meta {
+  justify-content: flex-end;
+}
+
+.message-bubble.other .message-meta {
+  justify-content: flex-start;
+}
+
+.message-time {
+  font-size: 11px;
+  color: #adb5bd;
+  font-weight: 500;
+}
+
+.message-status {
+  display: flex;
+  align-items: center;
+}
+
+.status-icon {
+  font-size: 12px;
+  color: #28a745;
+}
+
+/* Message grouping - remove avatar for consecutive messages from same user */
+.message-bubble.other:not(:first-child) .message-avatar {
+  visibility: hidden;
+}
+
+.message-bubble.other .message-sender {
+  display: block;
+}
+
+.message-bubble.other:not(.message-bubble.other + .message-bubble.other) .message-sender {
+  display: none;
+}
+
+/* Animation for new messages */
+.message-bubble {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects */
+.message-text:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Long message handling */
+.message-text {
+  max-width: 100%;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Message spacing adjustments */
+.message-bubble + .message-bubble.own {
+  margin-top: 2px;
+}
+
+.message-bubble + .message-bubble.other {
+  margin-top: 2px;
+}
+
+.message-bubble.own + .message-bubble.other,
+.message-bubble.other + .message-bubble.own {
+  margin-top: 16px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .message-content {
+    max-width: 85%;
+  }
+  
+  .message-text {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+  
+  .message-avatar {
+    width: 32px;
+    height: 32px;
+    font-size: 12px;
+  }
+} 
