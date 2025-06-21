@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { v4 as uuidv4 } from 'uuid';
 
-// Sample data for demonstration
+// Sample data
 const sampleChats = [
   {
     id: '1',
@@ -109,7 +109,7 @@ const chatSlice = createSlice({
           state.chats.unshift(movedChat);
         }
         
-        // Note: In a real app, you would dispatch an async action here
+        // Note: In a real app, we would dispatch an async action here
         // For demo purposes, we'll simulate responses in the component
       }
     },

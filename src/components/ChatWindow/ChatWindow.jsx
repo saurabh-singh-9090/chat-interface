@@ -1,9 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { FiSend, FiSmile, FiPaperclip, FiMoreVertical } from 'react-icons/fi';
-import { sendMessage } from '../store/chatSlice';
-import { useSimulatedResponse } from '../hooks/useSimulatedResponse';
-import MessageBubble from './MessageBubble';
+import { sendMessage } from '../../store/chatSlice';
+import { useSimulatedResponse } from '../../hooks/useSimulatedResponse';
+import MessageBubble from '../MessageBubble/MessageBubble';
 import './ChatWindow.css';
 
 const ChatWindow = () => {

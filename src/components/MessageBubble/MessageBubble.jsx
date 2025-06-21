@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { FiCheck, FiCheckCircle, FiMoreVertical, FiTrash2 } from 'react-icons/fi';
-import { deleteMessage } from '../store/chatSlice';
+import { deleteMessage } from '../../store/chatSlice';
 import './MessageBubble.css';
 
 const MessageBubble = ({ message, isFirst, isLast }) => {

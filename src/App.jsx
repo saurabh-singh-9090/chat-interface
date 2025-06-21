@@ -1,6 +1,5 @@
 import React from 'react'
-import ChatSidebar from './components/ChatSidebar'
-import ChatWindow from './components/ChatWindow'
+import { ChatSidebar, ChatWindow } from './components'
 import './App.css'
 
 function App() {

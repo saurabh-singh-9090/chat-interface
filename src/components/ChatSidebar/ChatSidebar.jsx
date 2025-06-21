@@ -6,7 +6,7 @@ import {
   FiTrash2, 
   FiSearch,
 } from 'react-icons/fi';
-import { createChat, deleteChat, setActiveChat } from '../store/chatSlice';
+import { createChat, deleteChat, setActiveChat } from '../../store/chatSlice';
 import './ChatSidebar.css';
 
 const ChatSidebar = () => {
