@@ -6,11 +6,34 @@ A modern, responsive chat interface built with React and Redux Toolkit. This app
 
 **[View Live Application](https://saurabh-singh-9090.github.io/chat-interface)**
 
-## 📋 Table of Contents
+## 🚀 Getting Started
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Getting Started](#getting-started)
+### Prerequisites
+
+Make sure you have the following installed:
+- **Node.js** (version 16 or higher)
+- **npm** (comes with Node.js)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/saurabhsingh-9090/chat-interface.git
+   cd chat-interface
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
 
 ## ✨ Features
 
@@ -60,33 +83,3 @@ A modern, responsive chat interface built with React and Redux Toolkit. This app
 
 ### Utilities
 - **UUID 11.1.0** - Unique ID generation for messages and chats
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-- **Node.js** (version 16 or higher)
-- **npm** (comes with Node.js)
-
-### Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/saurabhsingh-9090/chat-interface.git
-   cd chat-interface
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Start the development server**
-   ```bash
-   npm run dev
-   ```
-
-4. **Open your browser**
-   Navigate to `http://localhost:5173` to view the application
-
